@@ -1,0 +1,24 @@
+@import url(tokens.css);
+@import url(semantic.css);
+@import "tailwindcss"; /* Esta línea debe quedar al final para que funcione*/
+
+@theme {
+
+    --color-brand: var(--semantic-brand);
+    --color-brand-hover: var(--semantic-brand-hover);
+    --color-brand-soft: var(--semantic-brand-soft);
+
+    --color-background: var(--semantic-backround);
+    --color-surface: var(--semantic-surface);
+    --color-surface-muted: var(--semantic-surface-muted);
+
+    --color-text-primary: var(--semantic-text-primary); 
+    --color-text-secundary: var(--semantic-text-secundary); 
+    --color-text-muted: var(--semantic-text-muted); 
+    --color-text-inverse: var(--semantic-text-inverse); 
+
+    --color-border: var(--semantic-border);
+    --color-border-strong: var(--semantic-border-strong);
+
+    --color-warning: var(--semantic-warning); 
+};

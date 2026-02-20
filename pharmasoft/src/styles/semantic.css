@@ -1,0 +1,39 @@
+/* @import url(tokens.css); */
+
+/* Son roles de interfaz */
+
+:root{
+
+    /* ===== BRAND ===== */
+
+    --semantic-brand: var(--color-primary-800);
+    --semantic-brand-hover: var(--color-primary-900); /* Generalmente es de un tono más alto que el brand */
+    --semantic-brand-soft: var(--color-primary-300);
+
+    /* ===== BACKGROUND ===== */
+
+    --semantic-background: var(--color-primary-150); /* Fondo principal de toda la aplicación */
+    --semantic-surface: var(--white); /* Fondo de modales, card, containers */
+    --semantic-surface-muted: var(--color-gray-200); /* Zonas secundarias, con menos importancia */
+
+    /* ===== TEXT ===== */
+
+    --semantic-text-primary: var(--color-gray-900); /* Color principal de lectura, títulos, texto base del documento */
+    --semantic-text-secundary: var(--color-gray-700); /* Textos menos dominantes */
+    --semantic-text-muted: var(--color-gray-500); /* Texto deshabilitado */
+    --semantic-text-inverse: var(-color--gray-50); /* Texto invertido */
+
+    /* ===== BORDER ===== */
+
+    --semantic-border: var(--color-gray-200); /* Borde principal de todos los componentes */
+    --semantic-border-strong: var(--color-gray-400); /* Bordes mas fuertes */
+
+    /* ===== STATE ===== */
+
+    --semantic-warning: var(--color-secundary-950); 
+
+    /* ============================================= */
+    /* YA NO DEPENDEMOS DE NOMBRES DE COLORES,       */
+    /*       DEPENDEMOS ES DE INTENCIÓN              */
+    /* ============================================= */
+}
