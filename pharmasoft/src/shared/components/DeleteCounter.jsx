@@ -21,22 +21,22 @@
 // ===================================================CONTADOR==============================================================
 // =========================================================================================================================
 
-export default function DeleteCounter(){
+// export default function DeleteCounter(){
 
-    let count = 0;
+//     let count = 0;
 
-    const incrementar = () => {
-        count = count + 1;
-        console.log("El nuevo valor es", count);
-    }
+//     const incrementar = () => {
+//         count = count + 1;
+//         console.log("El nuevo valor es", count);
+//     }
 
-    return(
-        <>
-        <p>Contador: {count}</p>
-        <button onClick={incrementar}>Incrementar</button>
-        </>
-    );
-};
+//     return(
+//         <>
+//         <p>Contador: {count}</p>
+//         <button onClick={incrementar}>Incrementar</button>
+//         </>
+//     );
+// };
 
 // 1-React solo actualiza la interfaz cuando usamos use state.
 // 2-La UIn este último ejemplo deja de actualizarse porque No
