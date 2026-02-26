@@ -1,7 +1,17 @@
 import Input from "@/shared/components/Input";
 import Button from "@/shared/components/Button";
+import Select from "@/shared/components/Select";
+import "@/features/users/services/selectService"
+import { useEffect, useState } from "react";
+import { getDocumentTypes } from "../services/selectService";
 
 export default function UserForm(){
+
+    const [documentTypes, setDocumentTypes] = useState([])
+
+    useEffect(() => {
+        getDocumentTypes().then(setDocumentTypes)
+    }, [])
 
     // const handleNameChange = (e) => {
     //     console.log("Nombre del usuario:", e.target.value)
@@ -41,6 +51,13 @@ export default function UserForm(){
                 >
                 </Input>
 
+                <Select
+                label="Tipo de documento"
+                name="documentType"
+                options={documentTypes}
+                >
+                </Select>
+
                 {/* Actions */}
                 <div className="flex items-center justify-center gap-12 py-6">
                     <Button
@@ -59,12 +76,6 @@ export default function UserForm(){
                 </div>
             </form>
         </div>
-
-
-
-
-
-
     )
 
 }

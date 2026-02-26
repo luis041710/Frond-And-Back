@@ -2,6 +2,7 @@ import UserForm from "../features/users/components/UserForm"
 import DeleteUseEffect from "../shared/components/DeleteUseEffect"
 import "../styles/global.css"
 import DeleteCounter from "@/shared/components/DeleteCounter"
+import Select from "@/shared/components/Select"
 
 export default function App() {
   return(
@@ -21,8 +22,6 @@ export default function App() {
       <DeleteUseEffect/>
       
     </div>
-
-    
     
   );
 };
