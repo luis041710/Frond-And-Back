@@ -11,11 +11,13 @@ export default function MainLayout(){
 
             </div>
 
+            {/* Filtro */}
 
+            <div className="absolute inset-0 -z-10 bg-white/50"></div>
 
             {/* Navbar */}
-            <header className="-z-100">
-                <Navbar />
+            <header className="relative z-20">
+                <Navbar variant="transparent"/>
             </header>
 
             <main className="mx-auto max-w-7xl px-4 py-6">
