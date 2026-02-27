@@ -1,26 +1,33 @@
 import Navbar from "@/shared/Layout/Navbar";
-import { Outlet } from "react-router-dom";
-import heroBg from "@/assets/images/10-imagen-hero.jpg"
+import { Outlet, useLocation } from "react-router-dom";
+
 
 export default function MainLayout(){
+    /**
+     * useLocation es un hook de react router que te da acceso al objeto locatio, el cual contiene informacion de la URL actual:
+     * pathNmae = La ruta actual (/about, etc)
+     */
+    const location = useLocation();
+
+    const isHome = location.pathname === "/"
+
+
 
     return(
-        <div className="relative min-h-screen">
-            <div className="absolute -z-10 inset-0 bg-cover bg-center"
-                style={{backgroundImage: `url(${heroBg})`}}>
+        /**
+         * Navbar transparente solo en el home
+         * Si la ruta es exactamente / => transparente
+         * Si es cualquier otra ruta es solido
+         */
+        <div className="min-h-screen text-text-primary">
 
-            </div>
-
-            {/* Filtro */}
-
-            <div className="absolute inset-0 -z-10 bg-white/50"></div>
 
             {/* Navbar */}
-            <header className="relative z-20">
-                <Navbar variant="transparent"/>
-            </header>
+                <Navbar variant={isHome ? "transparent" : "solid"}/>
 
-            <main className="mx-auto max-w-7xl px-4 py-6">
+            
+            {/* Contenido externo que se inyecta */}
+            <main className="mx-auto">
                 <Outlet />
             </main>
 
